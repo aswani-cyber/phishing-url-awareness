@@ -1,75 +1,59 @@
-\# Phishing URL Awareness Checker
+# EWB Phishing URL Awareness Checker
 
+## Overview
 
+Phishing is a type of social engineering attack that tricks users into sharing sensitive information through fake websites, emails, and malicious links.
 
+The **EWB Phishing URL Awareness Checker** is a beginner-friendly Python-based cybersecurity project that checks URLs for common suspicious characteristics.
 
-\## About the Project
+It helps users understand possible warning signs in a URL before deciding whether to trust it.
 
-This is a beginner-friendly Python cybersecurity project.
+## Features
 
-It checks URLs for common phishing warning signs.
+The tool checks for the following suspicious URL characteristics:
 
+- Detects the `@` symbol in a URL.
+- Flags URLs longer than 100 characters.
+- Detects IP addresses used as hostnames.
+- Flags URLs with five or more hostname labels.
+- Detects the `xn--` punycode marker.
+- Identifies URLs using HTTP instead of HTTPS.
+- Allows users to check multiple URLs continuously until they enter `q` to quit.
 
+## Technologies Used
 
-\## Features
+- Python
+- Visual Studio Code
+- GitHub
 
-\- Detects @ symbols in URLs
+## Requirements
 
-\- Checks unusually long URLs
+- Python 3.10 or above
+- No additional Python packages required.
 
-\- Detects IP address hostnames
+## How to Run
 
-\- Checks multiple subdomains
+1. Download or clone this repository.
+2. Open the project folder in Visual Studio Code.
+3. Open the terminal.
+4. Run the following command:
 
-\- Detects punycode markers
+```bash
+python phishing_checker.py
+```
 
-\- Identifies HTTP URLs
+5. Enter a URL when prompted.
+6. Enter `q` to exit the program.
 
+## Sample URLs for Testing
 
-
-\## Technologies Used
-
-\- Python 3
-
-\- Regular Expressions
-
-\- URL Parsing
-
-
-
-\## How to Run
-
-
-
-1\. Install Python 3.
-
-2\. Open Command Prompt in the project folder.
-
-3\. Run:
-
-
-
-python phishing\_checker.py
-
-
-
-4\. Enter a sample URL when prompted.
-
-
-
-\## Safety Note
-
-This tool only checks URL text.
-
-It does not open websites or send data.
-
-No warning signs found does NOT prove a URL is safe.
-
-
-
-\## Author
-
-Cybersecurity Student
+| Test | URL |
+|---|---|
+| Normal URL | `https://www.example.com/login` |
+| IP address | `http://192.0.2.10/account` |
+| @ symbol | `http://example.com@sample.invalid/login` |
+| Multiple hostname labels | `https://a.b.c.d.e.example.invalid/path` |
+| Punycode | `https://xn--example.invalid/` |
 
 ## Screenshots
 
@@ -81,4 +65,27 @@ Cybersecurity Student
 
 ![Test Results](screenshots/test_results.png)
 
+## Project Limitations
+
+- This is an educational awareness tool.
+- It checks URL text only.
+- It does not open websites or visit URLs.
+- It does not verify whether a website is genuinely safe or malicious.
+- A URL with no warning signs is not guaranteed to be safe.
+
+## Ethical Use
+
+This project is created for educational purposes to improve phishing URL awareness and support cybersecurity learning.
+
+Always use cybersecurity tools responsibly and ethically.
+
+## Author
+
+**Aswani KP**
+
+AI-Powered Cybersecurity | EWB Courses
+
+## Repository
+
+[Phishing URL Awareness Checker](https://github.com/aswani-cyber/phishing-url-awareness)
 
