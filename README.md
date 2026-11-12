@@ -2,6 +2,7 @@
 
 
 
+
 \## About the Project
 
 This is a beginner-friendly Python cybersecurity project.
@@ -69,4 +70,15 @@ No warning signs found does NOT prove a URL is safe.
 \## Author
 
 Cybersecurity Student
+
+## Screenshots
+
+### Sample Run
+
+![Sample Run](screenshots/sample_run.png)
+
+### Test Results
+
+![Test Results](screenshots/test_results.png)
+
 
