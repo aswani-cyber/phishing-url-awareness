@@ -1,66 +1,54 @@
-\# Phishing URL Checker - Test Samples
 
+# Phishing URL Awareness Checker - Test Samples
 
-
-\## Test 1: Normal Example URL
+## Test 1: Normal Example URL
 
 URL: https://www.example.com/login
 
-
-
 Expected Result:
+- No listed warning signs found. This does NOT prove safety.
 
-No listed warning signs found.
-
-
-
-\## Test 2: IP Address URL
+## Test 2: IP Address URL
 
 URL: http://192.0.2.10/account
 
-
-
 Expected Result:
+- Uses an IP address instead of a familiar domain.
+- Uses HTTP. HTTPS alone does not prove trust.
+- Total warning signs found: 2
+- REVIEW CAREFULLY before trusting this URL.
 
-\- Uses an IP address instead of a familiar domain.
-
-\- Uses HTTP.
-
-
-
-\## Test 3: URL Contains @ Symbol
+## Test 3: URL Contains @ Symbol
 
 URL: http://example.com@sample.invalid/login
 
-
-
 Expected Result:
+- Contains an @ symbol; inspect carefully.
+- Uses HTTP. HTTPS alone does not prove trust.
+- Total warning signs found: 2
+- REVIEW CAREFULLY before trusting this URL.
 
-\- Contains an @ symbol.
-
-\- Uses HTTP.
-
-
-
-\## Test 4: Multiple Subdomains
+## Test 4: Multiple Hostname Labels
 
 URL: https://a.b.c.d.e.example.invalid/path
 
-
-
 Expected Result:
+- Contains many hostname segments/subdomains.
+- Total warning signs found: 1
+- REVIEW CAREFULLY before trusting this URL.
 
-\- Contains many hostname segments/subdomains.
-
-
-
-\## Test 5: Punycode URL
+## Test 5: Punycode URL
 
 URL: https://xn--example.invalid/
 
+Expected Result:
+- Contains a punycode-style hostname.
+- Total warning signs found: 1
+- REVIEW CAREFULLY before trusting this URL.
 
+## Additional Test: Invalid URL
+
+URL: http://[bad
 
 Expected Result:
-
-\- Contains a punycode-style hostname.
-
+- Invalid URL format. Please enter a valid URL.
