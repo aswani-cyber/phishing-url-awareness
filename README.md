@@ -11,14 +11,15 @@ It helps users understand possible warning signs in a URL before deciding whethe
 ## Features
 
 The tool checks for the following suspicious URL characteristics:
-
-- Detects the `@` symbol in a URL.
-- Flags URLs longer than 100 characters.
+- Detects URLs containing an @ symbol.
+- Identifies unusually long URLs (over 100 characters).
 - Detects IP addresses used as hostnames.
-- Flags URLs with five or more hostname labels.
-- Detects the `xn--` punycode marker.
-- Identifies URLs using HTTP instead of HTTPS.
-- Allows users to check multiple URLs continuously until they enter `q` to quit.
+- Identifies URLs with many hostname segments.
+- Detects punycode-style hostnames.
+- Checks whether a URL uses HTTP.
+- Handles malformed URL input.
+- Displays the total number of warning signs.
+- Allows users to check multiple URLs until they type quit.
 
 ## Technologies Used
 
